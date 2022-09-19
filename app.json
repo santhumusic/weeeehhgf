@@ -22,6 +22,11 @@
         "description": "Fill Api Hash Take This Value From my.telegram.org",
         "value": "",
         "required": true
+      },
+      "STRING_SESSION": {
+        "description": "Fill STRING Take This Value From my.telegram.org",
+        "value": "",
+        "required": true
       }, 
       "SUDO_USERS": {
         "description": "Sudo Users id also put owner id here - Saparated By Space",
