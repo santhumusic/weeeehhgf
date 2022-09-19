@@ -28,3 +28,8 @@ if not API_ID:
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1)
+
+idle() 
+
+print("successfully deployed") 
+print("developers : groot kanna santhu") 
