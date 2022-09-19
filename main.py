@@ -16,6 +16,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 API_ID = API_ID
 API_HASH = API_HASH 
 SUDO_USERS = SUDO_USERS
+STRING_SESSION = STRING_SESSION
 
 if not STRING_SESSION:
     logging.error("No String Session Found! Exiting!")
