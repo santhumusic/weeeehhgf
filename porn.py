@@ -10,7 +10,7 @@ from typing import Tuple
 
 
 
-@Client.on_message(filters.user(sudo_user) & filters.command(["pornspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(sudo_user) & filters.command(["porn"], [".", "!", "/"]))
 async def prd(client: Client, message: Message):       
     sex = await message.reply_text("`Processing..`")
     quantity = message.command[1]
