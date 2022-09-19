@@ -6,7 +6,7 @@ from config import SUDO_USER as sudo_user
 from config import PROGROUPS, PORNS
 from traceback import format_exc
 from typing import Tuple
-
+from pyrogram import Client, filters
 
 
 
