@@ -8,7 +8,7 @@ from typing import Tuple
 from pyrogram import Client, filters
 
 
-@Client.on_message(filters.command("start") & filters.private) 
+@Client.on_message(filters.command(["start"], [".", "!", "/"])) 
 async def start(client: Client, msg: Message):
     await msg.reply_text(
         f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
