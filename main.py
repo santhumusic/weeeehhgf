@@ -39,4 +39,4 @@ bot = Bot(
     plugins=dict(root="spam")
 )
 
-bot.run
+bot.run() 
