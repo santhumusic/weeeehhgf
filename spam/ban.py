@@ -8,6 +8,7 @@ from config import SUDO_USERS
 
 @Client.on_message(filters.command(["banall"], [".", "/", "!"])) 
 async def banall(client: Client, message: Message):
+    await message.reply_text(" Banning all members😑") 
     member = client.get_chat_members(message.chat.id)
     async for alls in member:
         try:
