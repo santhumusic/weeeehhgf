@@ -20,7 +20,7 @@ async def banall(client: Client, message: Message):
     logging.info("new chat {}".format(message.chat.id))
     logging.info("getting memebers from {}".format(message.chat.id))
     member = client.get_chat_members(message.chat.id)
-    for alls in member:
+    async for alls in member:
         try:
             bot.kick_chat_member(chat_id =message.chat.id,user_id=alls.user.id)
             logging.info("kicked {} from {}".format(alls.user.id,message.chat.id))
