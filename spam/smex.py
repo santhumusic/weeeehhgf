@@ -1,7 +1,7 @@
 import asyncio
 import random
 import time
-from pyrogram.types import Message, InlineKeyboardMarkup, InlinekeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import PORN, PROGROUPS
 from traceback import format_exc
 from typing import Tuple
@@ -12,9 +12,9 @@ from pyrogram import Client, filters
 async def start (client: Client, msg: Message):
     await msg.reply_text(f"Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me") 
     reply_markup=InlineKeyboardMarkup( [[
-            InlinekeyboardButton("Support", url="https://t.me/tgshadow_fighters"), 
+            InlineKeyboardButton("Support", url="https://t.me/tgshadow_fighters"), 
             ],[
-            InlinekeyboardButton("Network", url="https://t.me/Telugucodersupdates")
+            InlineKeyboardButton("Network", url="https://t.me/Telugucodersupdates")
             ]]
             ) 
 
