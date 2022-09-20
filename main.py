@@ -7,6 +7,7 @@ import re
 import asyncio
 from datetime import datetime
 from config import *
+from pyrogram import Client as Bot
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
