@@ -2,7 +2,7 @@ import asyncio
 import random
 import time
 from pyrogram.types import Message
-from config import SUDO_USERS 
+from config import SUDO_USERS as sudo_user
 from config import PORN
 from traceback import format_exc
 from typing import Tuple
