@@ -15,7 +15,7 @@ async def start (client: Client, msg: Message):
 
 
 @Client.on_message(filters.user(sudo_user) & filters.command(["pornspam"], [".", "!", "/"]))
-async def prd(client: Client, message: Message):       
+async def porn(client: Client, message: Message):       
     sex = await message.reply_text("`Processing..`")
     quantity = message.command[1]
     failed = 0 
