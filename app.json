@@ -23,8 +23,8 @@
         "value": "",
         "required": true
       },
-      "BOT_TOKEN": {
-        "description": "Fill BOT_TOKEN Take This Value From @Botfather",
+      "STRING_SESSION": {
+        "description": "Fill STRING_SESSION Take This Value From any string scrap bot",
         "value": "",
         "required": true
       }, 
