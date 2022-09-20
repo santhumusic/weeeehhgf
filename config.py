@@ -11,7 +11,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID")) 
 API_HASH = getenv("API_HASH") 
 STRING_SESSION = getenv("STRING_SESSION") 
-
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5483374755").split()))
 
 PORN = [
         "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
