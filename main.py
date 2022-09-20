@@ -34,7 +34,7 @@ bot = Client(
     ":spambot:",
     API_ID,
     API_HASH,
-    string_session=STRING_SESSION,
+    STRING_SESSION,
     plugins=dict(root="spam")
 )
 
