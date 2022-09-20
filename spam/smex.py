@@ -3,7 +3,7 @@ import random
 import time
 from pyrogram.types import Message
 from config import SUDO_USERS as sudo_user
-from config import PORN
+from config import PORN, PROGROUPS
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
