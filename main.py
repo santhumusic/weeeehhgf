@@ -29,14 +29,4 @@ if not API_ID:
 
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
-    quit(1)
-
-
-user = Client(
-    STRING_SESSION,
-    api_id=API_ID,
-    api_hash=API_HASH,
-)
-
-
-user.run() 
+    quit(1) 
