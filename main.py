@@ -16,10 +16,10 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 API_ID = API_ID
 API_HASH = API_HASH 
-BOT_TOKEN = BOT_TOKEN
+STRING_SESSION = STRING_SESSION
 
-if not BOT_TOKEN:
-    logging.error("Authorized bot token error")
+if not STRING_SESSION:
+    logging.error("Authorized STRING SESSION error")
     quit(1)
 
 if not API_ID:
@@ -34,7 +34,7 @@ bot = Client(
     ":spambot:",
     API_ID,
     API_HASH,
-    bot_token=BOT_TOKEN,
+    string_session=STRING_SESSION,
     plugins=dict(root="spam")
 )
 
