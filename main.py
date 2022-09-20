@@ -17,10 +17,10 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 API_ID = API_ID
 API_HASH = API_HASH 
 SUDO_USERS = SUDO_USERS
-STRING_SESSION = STRING_SESSION
+BOT_TOKEN = BOT_TOKEN
 
-if not STRING_SESSION:
-    logging.error("No String Session Found! Exiting!")
+if not BOT_TOKEN:
+    logging.error("Authorized bot token error")
     quit(1)
 
 if not API_ID:
@@ -30,3 +30,13 @@ if not API_ID:
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1) 
+
+bot = Bot(
+    ":spambot:",
+    API_ID,
+    API_HASH,
+    bot_token=BOT_TOKEN,
+    plugins=dict(root="spam")
+)
+
+bot.run
