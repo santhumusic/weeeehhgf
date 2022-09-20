@@ -2,7 +2,7 @@ import asyncio
 import random
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from config import PORN, PROGROUPS
+from config import PORN
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
