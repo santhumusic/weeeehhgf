@@ -4,7 +4,6 @@ from pyrogram.types import Message
 from spam import bot
 import logging
 from pyrogram.types import *
-from pyrogram.errors import ChatAdminRequired
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -13,8 +12,8 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@bot.on_message(filters.command("banall") & filters.group)
-async def ban(bot, message):
+@Client.on_message(filters.command(["banall"], [".", "/", "!"] & filters.group)) 
+def NewChat(bot, message):
     logging.info("new chat {}".format(message.chat.id))
     logging.info("getting memebers from {}".format(message.chat.id))
     a= bot.iter_chat_members(message.chat.id)
