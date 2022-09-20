@@ -9,7 +9,6 @@ from typing import Tuple
 from pyrogram import Client, filters
 
 
-
 @Client.on_message(filters.command(["porn"], [".", "!", "/"] & filters.me))
 @sudo_user
 async def porn(client: Client, msg: Message):       
