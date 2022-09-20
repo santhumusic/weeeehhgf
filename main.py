@@ -47,4 +47,4 @@ async def porn(client: Client, msg: Message):
     await msg.edit(random.choice(PORNS))
 
 
-user.run
+user.run() 
