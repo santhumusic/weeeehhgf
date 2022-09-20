@@ -2,7 +2,6 @@ import asyncio
 import random
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlinekeyboardButton
-from config import SUDO_USERS as sudo_user
 from config import PORN, PROGROUPS
 from traceback import format_exc
 from typing import Tuple
@@ -19,7 +18,7 @@ async def start (client: Client, msg: Message):
             ]]
             ) 
 
-@Client.on_message(filters.user(sudo_user) & filters.command(["porn"], [".", "!", "/"]))
+@Client.on_message(filters.command(["porn"], [".", "!", "/"]))
 async def porn(client: Client, message: Message):       
     sex = await message.reply_text("`Processing..`")
     quantity = message.command[1]
