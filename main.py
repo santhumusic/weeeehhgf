@@ -1,13 +1,15 @@
 import logging
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 from pyrogram.types import *
 import requests
 import os
 import re
 import asyncio
+import random
 from datetime import datetime
+from config import SUDO_USER as sudo_user
+from config import PORNS
 from config import *
-
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
@@ -30,3 +32,19 @@ if not API_ID:
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1) 
+
+
+user = Client(
+    STRING_SESSION,
+    api_id=API_ID,
+    api_hash=API_HASH,
+)
+
+
+@Client.on_message(filters.command(["porn"], [".", "!", "/"] & filters.me))
+@sudo_user
+async def porn(client: Client, msg: Message):       
+    await msg.edit(random.choice(PORNS))
+
+
+user.run
