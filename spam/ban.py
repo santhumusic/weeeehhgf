@@ -6,7 +6,7 @@ from pyrogram.types import Message
 @Client.on_message(filters.command(["kickall", "banall"], [".", "!"]))
 @Client.on_message(filters.command('kickall', ["."]))
 async def kickall(client: Client, message: Message):
-    await message.reply_text("kick all chat members!")
+    banall = await message.reply_text("kick all chat members!")
     member = client.get_chat_members(message.chat.id)
     async for alls in member:
         try:
