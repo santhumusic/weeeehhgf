@@ -1,7 +1,7 @@
 import asyncio
 import random
 import time
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardMarkup, InlinekeyboardButton
 from config import SUDO_USERS as sudo_user
 from config import PORN, PROGROUPS
 from traceback import format_exc
