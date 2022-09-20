@@ -27,9 +27,6 @@ async def porn(client: Client, message: Message):
     quantity = message.command[1]
     failed = 0 
     quantity = int(quantity)
-    if int(message.chat.id) in PROGROUPS:
-        await sex.edit("`Baap Ke Group Me Spam Nahi!`")
-        return    
     for _ in range(quantity):
         try: 
             file = random.choice(PORN) 
