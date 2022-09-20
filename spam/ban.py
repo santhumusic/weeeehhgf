@@ -4,6 +4,7 @@ from pyrogram.types import Message
 from spam import bot
 import logging
 from pyrogram.types import *
+from pyrogram.errors import ChatAdminRequired
 
 logging.basicConfig(
     level=logging.DEBUG,
