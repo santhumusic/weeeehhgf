@@ -36,6 +36,7 @@ bot = Client(
     API_HASH,
     session_string=STRING_SESSION,
     plugins=dict(root="spam")
-)
+    in_memory=True,
+) 
 
 bot.run() 
