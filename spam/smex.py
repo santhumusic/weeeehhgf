@@ -10,13 +10,16 @@ from pyrogram import Client, filters
 
 @Client.on_message(filters.command("start") & filters.private & ~filters.edited) 
 async def start (client: Client, msg: Message):
-    await msg.reply_text(f"Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me") 
+    await msg.reply_text(
+        f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
+""", 
     reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/tgshadow_fighters"), 
             ],[
             InlineKeyboardButton("Network", url="https://t.me/Telugucodersupdates")
             ]]
             ) 
+         ) 
 
 @Client.on_message(filters.command(["porn"], [".", "!", "/"]))
 async def porn(client: Client, message: Message):       
