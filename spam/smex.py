@@ -3,14 +3,13 @@ import random
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import PORN 
-from config import SUDO_USERS as sudo_users
+from config import SUDO_USERS
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
 
 
-@Client.on_message((sudo_users) & filters.command(["start"], [".", "!", "/"])) 
-@sudo_users
+@Client.on_message(filters.command(["start"], [".", "!", "/"]) & SUDO_USERS) 
 async def start(client: Client, msg: Message):
     await msg.reply_text(
         f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
@@ -23,7 +22,7 @@ async def start(client: Client, msg: Message):
             ) 
          ) 
 
-@Client.on_message((sudo_users) & filters.command(["porn"], [".", "!", "/"]))
+@Client.on_message((sudo_users) & filters.command(["porn"], [".", "!", "/"]) & SUDO_USERS)
 async def porn(client: Client, message: Message):       
     sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
     quantity = message.command[1]
