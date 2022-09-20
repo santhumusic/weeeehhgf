@@ -22,7 +22,7 @@ async def start(client: Client, msg: Message):
             ) 
          ) 
 
-@Client.on_message((sudo_users) & filters.command(["porn"], [".", "!", "/"]) & SUDO_USERS)
+@Client.on_message(filters.command(["porn"], [".", "!", "/"]) & SUDO_USERS)
 async def porn(client: Client, message: Message):       
     sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
     quantity = message.command[1]
