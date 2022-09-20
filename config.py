@@ -71,6 +71,3 @@ PORN = [
         "https://telegra.ph/file/2fcccbc72c57b6892d23a.jpg",
         "https://telegra.ph/file/843109296a90b8a6c5f68.jpg",
 ]
-
-
-PROGROUPS = [-1001390643398, -1001161389761, -1001161389761]
