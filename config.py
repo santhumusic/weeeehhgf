@@ -10,7 +10,6 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID")) 
 API_HASH = getenv("API_HASH") 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5483374755").split()))
 BOT_TOKEN = getenv("BOT_TOKEN") 
 
 
