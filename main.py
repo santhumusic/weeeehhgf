@@ -29,14 +29,3 @@ if not API_ID:
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1) 
-
-bot = Client(
-    ":spambot:",
-    API_ID,
-    API_HASH,
-    session_string=STRING_SESSION,
-    in_memory=True, 
-    plugins=dict(root="spam")
-) 
-
-bot.run() 
