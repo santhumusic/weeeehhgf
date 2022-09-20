@@ -1,4 +1,4 @@
-from pyrogram impor Client, filters
+from pyrogram import Client, filters
 
 bot = Client(
     ":spambot:",
