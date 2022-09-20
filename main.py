@@ -31,7 +31,7 @@ if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1) 
 
-bot = Bot(
+bot = Client(
     ":spambot:",
     API_ID,
     API_HASH,
