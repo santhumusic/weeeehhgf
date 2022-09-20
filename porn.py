@@ -2,7 +2,7 @@ import asyncio
 import random
 import time
 from pyrogram.types import Message
-from config import SUDO_USERS as sudo_user
+from config import SUDO_USERS 
 from config import PORN
 from main import API_ID, API_HASH, STRING_SESSION 
 from traceback import format_exc
@@ -17,8 +17,7 @@ user = Client(
 )
 
 
-@Client.on_message(filters.me & filters.command(["porn"], [".", "!", "/"]))
-@sudo_user
+@Client.on_message(filters.me & filters.command(["porn"], [".", "!", "/"]) & SUDO_USERS)
 async def porn(client: Client, msg: Message):       
     await msg.edit(random.choice(PORNS))
 
