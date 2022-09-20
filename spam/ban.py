@@ -17,8 +17,6 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(filters.command(["banall"], [".", "/", "!"])) 
 async def banall(client: Client, message: Message):
-    logging.info("new chat {}".format(message.chat.id))
-    logging.info("getting memebers from {}".format(message.chat.id))
     member = client.get_chat_members(message.chat.id)
     async for alls in member:
         try:
