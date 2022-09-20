@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 
 
 @Client.on_message(filters.command("start") & filters.private & ~filters.edited) 
-async def start (client: Client, msg: Message):
+async def start(client: Client, msg: Message):
     await msg.reply_text(
         f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
 """, 
