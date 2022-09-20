@@ -2,13 +2,15 @@ import asyncio
 import random
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from config import PORN
+from config import PORN 
+from config SUDO_USERS as sudo_users
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
 
 
 @Client.on_message(filters.command(["start"], [".", "!", "/"])) 
+@sudo_users
 async def start(client: Client, msg: Message):
     await msg.reply_text(
         f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
@@ -22,8 +24,9 @@ async def start(client: Client, msg: Message):
          ) 
 
 @Client.on_message(filters.command(["porn"], [".", "!", "/"]))
+@sudo_users
 async def porn(client: Client, message: Message):       
-    sex = await message.reply_text("`Processing..`")
+    sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
     quantity = message.command[1]
     failed = 0 
     quantity = int(quantity)
