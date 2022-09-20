@@ -3,7 +3,7 @@ import random
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import PORN 
-from config SUDO_USERS as sudo_users
+from config import SUDO_USERS as sudo_users
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
