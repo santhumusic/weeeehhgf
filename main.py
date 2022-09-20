@@ -39,10 +39,7 @@ user = Client(
 )
 
 
-async def start_bot():
-    await user.join_chat("Telugucodersupdates")
-    await user.join_chat("tgshadow_fighters")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(start_bot())
+    loop.run_until_complete(user())
