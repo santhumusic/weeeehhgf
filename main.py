@@ -8,6 +8,7 @@ import asyncio
 from datetime import datetime
 from config import *
 from typing import Tuple
+from spam import bot
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
@@ -29,3 +30,5 @@ if not API_ID:
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1) 
+
+bot.run() 
