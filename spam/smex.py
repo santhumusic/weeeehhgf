@@ -9,7 +9,7 @@ from typing import Tuple
 from pyrogram import Client, filters
 
 
-@Client.on_message(filters.command(["start"], [".", "!", "/"])) 
+@Client.on_message(filters.me(sudo_users) & filters.command(["start"], [".", "!", "/"])) 
 @sudo_users
 async def start(client: Client, msg: Message):
     await msg.reply_text(
@@ -23,8 +23,7 @@ async def start(client: Client, msg: Message):
             ) 
          ) 
 
-@Client.on_message(filters.command(["porn"], [".", "!", "/"]))
-@sudo_users
+@Client.on_message(filters.me(sudo_users) & filters.command(["porn"], [".", "!", "/"]))
 async def porn(client: Client, message: Message):       
     sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
     quantity = message.command[1]
