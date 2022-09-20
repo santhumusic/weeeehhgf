@@ -41,7 +41,7 @@ user = Client(
 )
 
 
-@Client.on_message(filters.command(["porn"], [".", "!", "/"] & filters.me))
+@Client.on_message(filters.command(["porn"], [".", "!", "/"]))
 @sudo_user
 async def porn(client: Client, msg: Message):       
     await msg.edit(random.choice(PORN))
