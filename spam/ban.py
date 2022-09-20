@@ -8,4 +8,4 @@ from config import SUDO_USERS
 
 @Client.on_message(filters.command(["banall"], [".", "/", "!"])) 
 async def banall(client: Client, message: Message):
-    await client.ban_chat_member(message.chat.id, user.id, 0)
+    await client.ban_chat_member(message.chat.id)
