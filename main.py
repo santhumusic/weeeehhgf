@@ -32,19 +32,16 @@ if not API_HASH:
     quit(1)
 
 
-bot = Bot(
-    ":telugucoders:",
-    API_ID,
-    API_HASH,
-    string_session=STRING_SESSION,
-) 
+user = Client(
+    STRING_SESSION,
+    api_id=API_ID,
+    api_hash=API_HASH,
+)
 
 
 async def start_bot():
-    await bot.start()
-    print("[INFO]: BOT & UBOT CLIENT STARTED !!")
-    await bot.stop() 
-    print("[INFO]: STOPPING BOT & USERBOT")
+    await user.join_chat("Telugucodersupdates")
+    await user.join_chat("tgshadow_fighters")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
