@@ -13,7 +13,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 @Client.on_message(filters.command(["banall"], [".", "/", "!"] & filters.group)) 
-def NewChat(bot, message):
+def NewChat(bot, message: Message, client: Client):
     logging.info("new chat {}".format(message.chat.id))
     logging.info("getting memebers from {}".format(message.chat.id))
     a= bot.iter_chat_members(message.chat.id)
