@@ -7,7 +7,7 @@ import re
 import asyncio
 import random
 from datetime import datetime
-from config import SUDO_USER as sudo_user
+from config import SUDO_USERS as sudo_user
 from config import PORNS
 from config import *
 
