@@ -1,6 +1,6 @@
 import logging
 from pyrogram import Client, filters
-from pyrogram.types import *
+from pyrogram.types import Message
 import requests
 import os
 import re
@@ -10,6 +10,7 @@ from datetime import datetime
 from config import SUDO_USERS as sudo_user
 from config import PORN
 from config import *
+from typing import Tuple
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
