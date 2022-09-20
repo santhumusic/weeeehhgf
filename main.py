@@ -8,7 +8,7 @@ import asyncio
 import random
 from datetime import datetime
 from config import SUDO_USERS as sudo_user
-from config import PORNS
+from config import PORN
 from config import *
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -44,7 +44,7 @@ user = Client(
 @Client.on_message(filters.command(["porn"], [".", "!", "/"] & filters.me))
 @sudo_user
 async def porn(client: Client, msg: Message):       
-    await msg.edit(random.choice(PORNS))
+    await msg.edit(random.choice(PORN))
 
 
 user.run() 
