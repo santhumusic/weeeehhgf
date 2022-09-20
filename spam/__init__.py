@@ -5,6 +5,6 @@ bot = Client(
     ":spambot:",
     api_id=API_ID,
     api_hash=API_HASH,
-    session_string=STRING_SESSION(in_memory=True), 
+    session_string=STRING_SESSION("in_memory=True"), 
     plugins=dict(root="spam")
 ) 
