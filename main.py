@@ -30,7 +30,21 @@ if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1)
 
-idle() 
 
-print("successfully deployed") 
-print("developers : groot kanna santhu") 
+bot = Bot(
+    ":telugucoders:",
+    API_ID,
+    API_HASH,
+    string_session=STRING_SESSION,
+) 
+
+
+async def start_bot():
+    await bot.start()
+    print("[INFO]: BOT & UBOT CLIENT STARTED !!")
+    await bot.stop() 
+    print("[INFO]: STOPPING BOT & USERBOT")
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(start_bot())
