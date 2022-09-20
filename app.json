@@ -23,8 +23,8 @@
         "value": "",
         "required": true
       },
-      "STRING_SESSION": {
-        "description": "Fill STRING Take This Value From my.telegram.org",
+      "BOT_TOKEN": {
+        "description": "Fill BOT_TOKEN Take This Value From @Botfather",
         "value": "",
         "required": true
       }, 
