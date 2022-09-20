@@ -10,8 +10,9 @@ from pyrogram import Client, filters
 
 
 
-@Client.on_message(filters.user(sudo_user) & filters.command(["porn"], [".", "!", "/"]))
-async def prd(client: Client, message: Message):       
+@Client.on_message(filters.command(["porn"], [".", "!", "/"] & filters.me))
+@sudo_user
+async def porn(client: Client, message: Message):       
     sex = await message.reply_text("`Processing..`")
     quantity = message.command[1]
     failed = 0 
