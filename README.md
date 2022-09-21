@@ -6,4 +6,5 @@
  [THIS ALSO FOR HEROKU](https://heroku.com/deploy?template=https://github.com/TeluguCodersMusic/Spambot) 
 
 
-#dont miss use 😑 credits to zaid bro and dcspam bot
+# dont miss use 😑 
+credits to zaid bro and dcspam bot
