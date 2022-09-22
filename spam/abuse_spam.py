@@ -20,6 +20,6 @@ async def spam(client: Client, message: Message):
     for _ in range(quantity):
         try: 
             text = random.choice(ABUSE_SPAM) 
-            await client.send_message(chat_id=message.chat.id, message=text)       
+            await client.send_text(chat_id=message.chat.id, text=text)       
         except FloodWait as e:
             await asyncio.sleep(e.x)
