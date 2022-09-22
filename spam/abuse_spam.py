@@ -14,7 +14,6 @@ from pyrogram.errors import FloodWait
 async def spam(client: Client, message: Message):   
     await message.delete() 
     spam = await message.reply_text("**processing your spam....**")
-    await message.delete() 
     quantity = message.command[1]
     failed = 0 
     quantity = int(quantity)
