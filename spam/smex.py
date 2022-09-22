@@ -6,6 +6,7 @@ from config import PORN
 from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
 
 
 @Client.on_message(filters.command(["start"], [".", "!", "/"])) 
