@@ -8,6 +8,7 @@ from typing import Tuple
 import random
 import asyncio
 from traceback import format_exc
+from pyrogram.errors import FloodWait
 
 @Client.on_message(filters.command(["spam"], [".", "!", "/"]))
 async def spam(client: Client, message: Message):   
