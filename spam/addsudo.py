@@ -22,9 +22,7 @@ async def useradd(client, message: Message):
             return await message.reply_text(
                 "{0} is already a sudo user.".format(user.mention)
             )
-        added = await add_sudo(user)
-        if added:
-            SUDO_USERS.add(user.id)
+            SUDO_USERS.add(message.reply_to_message.from_user.id)
             await message.reply_text("Added **{0}** to Sudo Users.".format(user.mention))
         else:
             await message.reply_text("Failed")
