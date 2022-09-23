@@ -13,7 +13,7 @@ def sudo_users_only(func: Callable) -> Callable:
         
     return decorator
 
-def add_sudo(user_id: int) -> bool:
+async def add_sudo(user_id: int) -> bool:
     sudoers = await get_sudoers()
     sudoers.append(user_id)
     await sudoersdb.update_one(
@@ -22,7 +22,7 @@ def add_sudo(user_id: int) -> bool:
     return True
 
 
-def remove_sudo(user_id: int) -> bool:
+async def remove_sudo(user_id: int) -> bool:
     sudoers = await get_sudoers()
     sudoers.remove(user_id)
     await sudoersdb.update_one(
