@@ -37,7 +37,7 @@ async def addsudo(client, message: Message):
         )
     added = await add_sudo(message.reply_to_message.from_user.id)
     if added:
-        SUDO_USERS.added(message.reply_to_message.from_user.id)
+        SUDO_USERS.add(message.reply_to_message.from_user.id)
         await message.reply_text(
             "Added **{0}** to Sudo Users.".format(
                 message.reply_to_message.from_user.mention
