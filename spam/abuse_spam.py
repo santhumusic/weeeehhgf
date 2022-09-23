@@ -9,8 +9,10 @@ import random
 import asyncio
 from traceback import format_exc
 from pyrogram.errors import FloodWait
+from spam.decorators import sudo_users_only
 
 @Client.on_message(filters.command(["spam"], [".", "!", "/"]))
+@sudo_users_only
 async def spam(client: Client, message: Message):   
     await message.delete() 
     spam = await message.reply_text("**processing your spam....**")
