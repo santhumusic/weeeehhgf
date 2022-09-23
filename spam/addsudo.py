@@ -5,8 +5,8 @@ from spam.decorators import add_sudo, remove_sudo
 from config import SUDO_USERS, MONGO_DB_URL, OWNER_ID
 from spam import bot
 
-@Client.on_message(filters.command(["addsudo"], [".", "/", "!"])) 
-async def addsudo(client, message: Message):
+@bot.on_message(filters.command(["addsudo"], [".", "/", "!"])) 
+async def useradd(client, message: Message):
     if MONGO_DB_URL is None:
         return await message.reply_text(
             "**Due to bot's privacy issues, You can't manage sudo users when you're using santhu spam Database.\n\n Please fill your MONGO_DB_URI in your vars to use this feature**"
