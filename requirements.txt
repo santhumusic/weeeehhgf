@@ -5,4 +5,4 @@ APScheduler==3.7.0
 requests
 dnspython
 aiohttp
-sgram==3.0.0
+https://github.com/TeluguCodersMusic/Sgram
