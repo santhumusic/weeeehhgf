@@ -47,7 +47,7 @@ async def useradd(client, message: Message):
         await message.reply_text("Failed")
     return
 
-@Client.on_message(command([".delsudo"]) & OWNER_ID)
+@Client.on_message(filters.command([".delsudo"]) & OWNER_ID)
 async def userdel(client, message: Message):
     if MONGO_DB_URL is None:
         return await message.reply_text(
@@ -80,7 +80,7 @@ async def userdel(client, message: Message):
     await message.reply_text(f"Something wrong happened.")
 
 
-@Client.on_message(commandpro([".sudousers", ".sudolist"]) & SUDO_USERS)
+@Client.on_message(filters.command([".sudousers", ".sudolist"]) & SUDO_USERS)
 async def sudoers_list(client, message: Message):
     text = "⭐️<u> **Owners:**</u>\n"
     count = 0
