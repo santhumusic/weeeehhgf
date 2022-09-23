@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from config import SUDO_USERS
 from typing import Callable
 from pyrogram.types import Message
-from spam.mongo import mongodb
+from spam import mongodb
 
 sudoersdb = mongodb.sudoers
 
