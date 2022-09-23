@@ -31,7 +31,14 @@
       "SUDO_USERS": {
         "description": "Sudo Users id also put owner id here - Saparated By Space",
         "value": "",
-        "required": true
+      }, 
+      "OWNER_ID": {
+        "description": "owner id also put owner id here - Saparated By Space",
+        "value": "",
+      }, 
+      "MONGO_DB_URL": {
+        "description": "scrap from mongo cloud",
+        "value": "",       
       }
   },
   "addons": [
