@@ -15,23 +15,12 @@ async def useradd(client: Client, message: Message):
             user = user.replace("@", "")
         user = await bot.get_users(user)
         if user.id in SUDO_USERS:
-            return await message.reply_text(
-                "{0} is already a sudo user.".format(user.mention)
-            )
+            return await message.reply_text("{0} is already a sudo user.".format(user.mention))
         if user.id in SUDO_USERS:
             await message.reply_text("Added **{0}** to Sudo Users.".format(user.mention))
         return
-    if message.reply_to_message.from_user.id in SUDO_USERS:
-        return await message.reply_text(
-            "{0} is already a sudo user.".format(
-                message.reply_to_message.from_user.mention
-            )
-        )
-    added = await add_sudo(message.reply_to_message.from_user.id)
-    if message.reply_to_message.from_user.id in SUDO_USERS:
+    if user.id in SUDO_USERS:
+        await message.reply_text("{0} is already a sudo user.".format(user.mention))
+    if user.id in SUDO_USERS:
         await message.reply_text(
-            "Added **{0}** to Sudo Users.".format(
-                message.reply_to_message.from_user.mention
-            )
-        )
-    return
+            "Added **{0}** to Sudo Users.".format(user.mention)) 
