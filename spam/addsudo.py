@@ -3,6 +3,7 @@ from spam.decorators import sudo_users_only
 from pyrogram.types import Message
 from spam.decorators import add_sudo, remove_sudo
 from config import SUDO_USERS, MONGO_DB_URL, OWNER_ID
+from spam import bot
 
 @Client.on_message(filters.command(["addsudo"], [".", "/", "!"])) 
 async def addsudo(client, message: Message):
@@ -16,7 +17,7 @@ async def addsudo(client, message: Message):
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
-        user = await app.get_users(user)
+        user = await bot.get_users(user)
         if user.id in SUDO_USERS:
             return await message.reply_text(
                 "{0} is already a sudo user.".format(user.mention)
@@ -36,7 +37,7 @@ async def addsudo(client, message: Message):
         )
     added = await add_sudo(message.reply_to_message.from_user.id)
     if added:
-        SUDO_USERS.add(message.reply_to_message.from_user.id)
+        SUDO_USERS.added(message.reply_to_message.from_user.id)
         await message.reply_text(
             "Added **{0}** to Sudo Users.".format(
                 message.reply_to_message.from_user.mention
