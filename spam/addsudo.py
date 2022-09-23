@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from spam.decorators import add_sudo, remove_sudo
 from config import SUDO_USERS, MONGO_DB_URL, OWNER_ID
 
-@Client.on_message(filters.command(["addsudo"], [".", "/", "!"]) & filters.user(OWNER_ID)
+@Client.on_message(filters.command(["addsudo"], [".", "/", "!"]) & filters.user(OWNER_ID)) 
 async def addsudo(client, message: Message):
     if MONGO_DB_URL is None:
         return await message.reply_text(
