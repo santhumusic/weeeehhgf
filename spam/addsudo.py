@@ -46,35 +46,3 @@ async def useradd(client, message: Message):
     else:
         await message.reply_text("Failed")
     return
-
-@Client.on_message(filters.command(["delsudo"], [".", "/", "!"]) & OWNER_ID) 
-async def userdel(client, message: Message):
-    if MONGO_DB_URL is None:
-        return await message.reply_text(
-            "**Due to bot's privacy issues, You can't manage sudo users when you're using santhu spam Database.\n\n Please fill your MONGO_DB_URI in your vars to use this feature**"
-        )
-    if not message.reply_to_message:
-        if len(message.command) != 2:
-            return await message.reply_text("Reply to a user's message or give username/user_id.")
-        user = message.text.split(None, 1)[1]
-        if "@" in user:
-            user = user.replace("@", "")
-        user = await bot.get_users(user)
-        if user.id not in SUDO_USERS:
-            return await message.reply_text("Not a part of Bot's Sudo.")
-        removed = await remove_sudo(user.id)
-        if removed:
-            SUDO_USERS.remove(user.id)
-            await message.reply_text("Removed from Bot's Sudo User")
-            return
-        await message.reply_text(f"Something wrong happened.")
-        return
-    user_id = message.reply_to_message.from_user.id
-    if user_id not in SUDO_USERS:
-        return await message.reply_text("Not a part of Bot's Sudo.")
-    removed = await remove_sudo(user_id)
-    if removed:
-        SUDO_USERS.remove(user_id)
-        await message.reply_text("Removed from Bot's Sudo User")
-        return
-    await message.reply_text(f"Something wrong happened.")
