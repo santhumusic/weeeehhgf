@@ -7,9 +7,10 @@ from traceback import format_exc
 from typing import Tuple
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-
+from spam.decorators import sudo_users_only
 
 @Client.on_message(filters.command(["start"], [".", "!", "/"])) 
+@sudo_users_only
 async def start(client: Client, msg: Message):
     await msg.reply_text(
         f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
@@ -23,6 +24,7 @@ async def start(client: Client, msg: Message):
          ) 
 
 @Client.on_message(filters.command(["porn"], [".", "!", "/"]))
+@sudo_users_only
 async def porn(client: Client, message: Message):       
     sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
     quantity = message.command[1]
