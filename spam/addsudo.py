@@ -2,11 +2,15 @@ from pyrogram import Client, filters
 from spam.decorators import sudo_users_only
 from pyrogram.types import Message
 from spam.decorators import add_sudo, remove_sudo
-
+from config import SUDO_USERS, MONGO_DB_URL
 
 @Client.on_message(filters.command(["addsudo"], [".", "/", "!"]))
 @sudo_users_only
 async def addsudo(client, message: Message):
+    if MONGO_DB_URL is None:
+        return await message.reply_text(
+            "**Due to bot's privacy issues, You can't manage sudo users when you're using santhu spam Database.\n\n Please fill your MONGO_DB_URI in your vars to use this feature**"
+        )
     if not message.reply_to_message:
         if len(message.command) != 2:
             return await message.reply_text("Reply to a user's message or give username/user_id.")
