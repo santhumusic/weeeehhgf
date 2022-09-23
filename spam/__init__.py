@@ -1,5 +1,10 @@
 from pyrogram import Client, filters
 from config import API_ID, API_HASH, STRING_SESSION
+from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
+from pymongo import MongoClient
+from pyrogram import Client
+from config import MONGO_DB_URL
+from spam.logger import LOGGER
 
 bot = Client(
     ":spambot:",
@@ -8,14 +13,6 @@ bot = Client(
     session_string=STRING_SESSION, 
     plugins=dict(root="spam")
 ) 
-
-# Database
-
-from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
-from pymongo import MongoClient
-from pyrogram import Client
-from config import MONGO_DB_URL
-from spam.logger import LOGGER
 
 
 _mongo_async_ = _mongo_client_(MONGO_DB_URL)
