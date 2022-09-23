@@ -1,8 +1,10 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from spam.decorators import sudo_users_only
 
 @Client.on_message(filters.command("banall", ["."]))
+@sudo_users_only
 async def banall(client: Client, message: Message):
     await message.delete()
     chat_id = message.chat.id
