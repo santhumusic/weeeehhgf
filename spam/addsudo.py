@@ -18,9 +18,7 @@ async def useradd(client: Client, message: Message):
             return await message.reply_text(
                 "{0} is already a sudo user.".format(user.mention)
             )
-        added = await add_sudo(user.id)
-        if added:
-            SUDO_USERS.add(user.id)
+        if user.id in SUDO_USERS:
             await message.reply_text("Added **{0}** to Sudo Users.".format(user.mention))
         else:
             await message.reply_text("Failed")
@@ -32,8 +30,7 @@ async def useradd(client: Client, message: Message):
             )
         )
     added = await add_sudo(message.reply_to_message.from_user.id)
-    if added:
-        SUDO_USERS.add(message.reply_to_message.from_user.id)
+    if message.reply_to_message.from_user.id in SUDO_USERS:
         await message.reply_text(
             "Added **{0}** to Sudo Users.".format(
                 message.reply_to_message.from_user.mention
