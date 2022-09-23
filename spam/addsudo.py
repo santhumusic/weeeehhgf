@@ -5,7 +5,7 @@ from spam.decorators import add_sudo, remove_sudo
 from config import SUDO_USERS, MONGO_DB_URL, OWNER_ID
 from spam import bot
 
-@Client.on_message(filters.command(["addsudo"], [".", "/", "!"]) & OWNER_ID) 
+@bot.on_message(filters.command(["addsudo"], [".", "/", "!"])) 
 async def useradd(client: Client, message: Message):
     if MONGO_DB_URL is None:
         return await message.reply_text(
