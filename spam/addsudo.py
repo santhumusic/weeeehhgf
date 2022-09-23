@@ -20,8 +20,6 @@ async def useradd(client: Client, message: Message):
             )
         if user.id in SUDO_USERS:
             await message.reply_text("Added **{0}** to Sudo Users.".format(user.mention))
-        else:
-            await message.reply_text("Failed")
         return
     if message.reply_to_message.from_user.id in SUDO_USERS:
         return await message.reply_text(
@@ -36,6 +34,4 @@ async def useradd(client: Client, message: Message):
                 message.reply_to_message.from_user.mention
             )
         )
-    else:
-        await message.reply_text("Failed")
     return
