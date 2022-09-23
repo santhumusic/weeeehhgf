@@ -13,7 +13,7 @@ async def useradd(client: Client, message: Message):
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
-        user = await bot.get_users(user)
+        user = await bot.get_users(user.id)
         if user.id in SUDO_USERS:
             return await message.reply_text("{0} is already a sudo user.".format(user.mention))
         if user.mention in SUDO_USERS:
