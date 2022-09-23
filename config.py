@@ -12,6 +12,8 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH") 
 STRING_SESSION = getenv("STRING_SESSION") 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5483374755").split()))
+OWNER_ID  = getenv("OWNER_ID", "5483374755")
+MONGO_DB_URL = getenv("MONGO_DB_URL")
 
 PORN = [
         "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
