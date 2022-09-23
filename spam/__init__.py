@@ -15,7 +15,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
 from pymongo import MongoClient
 from pyrogram import Client
 from config import MONGO_DB_URL
-from ..logger import LOGGER
+from spam.logger import LOGGER
 
 
 _mongo_async_ = _mongo_client_(MONGO_DB_URL)
