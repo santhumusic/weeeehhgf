@@ -9,7 +9,7 @@
 
 # dont miss use 😑 
 # Credits 
-- Pornstar Santhu, Kanna
+- Pornstars Santhu, Kanna
 
 # Commands
 - ( / ! , . ` )
