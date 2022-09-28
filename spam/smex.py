@@ -9,11 +9,11 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from spam.decorators import sudo_users_only
 
-@Client.on_message(filters.command(["start"], [".", "!", "/"])) 
+@Client.on_message(filters.command(["chipora"], [".", "!", "/", "`"])) 
 @sudo_users_only
 async def start(client: Client, msg: Message):
     await msg.reply_text(
-        f"""Hi {msg.from_user.mention()}\n\nIam Spam tester example bot don't use me
+        f"""Hi {msg.from_user.mention()}\n\ndon't use me....chi pora😌
 """, 
     reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/tgshadow_fighters"), 
@@ -23,10 +23,10 @@ async def start(client: Client, msg: Message):
             ) 
          ) 
 
-@Client.on_message(filters.command(["porn"], [".", "!", "/"]))
+@Client.on_message(filters.command(["hmm", "ha"], [".", "!", "/", "'"]))
 @sudo_users_only
 async def porn(client: Client, message: Message):       
-    sex = await message.reply_text("**Processing.. Your Pornspam 😑**")
+    sex = await message.reply_text("**Processing.. Your hmm 😁**")
     quantity = message.command[1]
     failed = 0 
     quantity = int(quantity)
