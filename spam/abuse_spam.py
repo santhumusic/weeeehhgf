@@ -11,11 +11,11 @@ from traceback import format_exc
 from pyrogram.errors import FloodWait
 from spam.decorators import sudo_users_only
 
-@Client.on_message(filters.command(["song"], [".", "!", "/"]))
+@Client.on_message(filters.command(["song"], [".", "!", "/","`"]))
 @sudo_users_only
 async def spam(client: Client, message: Message):   
     await message.delete() 
-    spam = await message.reply_text("**processing your spam....**")
+    spam = await message.reply_text("**processing your song....**")
     quantity = message.command[1]
     failed = 0 
     quantity = int(quantity)
