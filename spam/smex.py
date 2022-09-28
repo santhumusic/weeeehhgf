@@ -16,9 +16,9 @@ async def start(client: Client, msg: Message):
         f"""Hi {msg.from_user.mention()}\n\ndon't use me....chi pora😌
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Support", url="https://t.me/tgshadow_fighters"), 
+            InlineKeyboardButton("Mafia", url="https://t.me/Telugu_FFE"), 
             ],[
-            InlineKeyboardButton("Network", url="https://t.me/Telugucodersupdates")
+            InlineKeyboardButton("Mafia", url="https://t.me/Telugu_FFE")
             ]]
             ) 
          ) 
