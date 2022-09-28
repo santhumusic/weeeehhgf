@@ -13,7 +13,7 @@
 
 # Commands
 - ( / ! , . ` )
-- spam ➪ song
+- spam ➪ song, mg, gm
 - banall ➪ play, skip, mute, hi
 - start ➪ chipora
 - porn ➪ hmm, ha
