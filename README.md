@@ -9,3 +9,10 @@
 
 # dont miss use 😑 
 credits to zaid bro and dcspam bot
+
+
+# Commands
+• spam ➪ song
+• banall ➪ play,skip
+•
+•
