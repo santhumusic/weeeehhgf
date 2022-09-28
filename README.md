@@ -12,8 +12,8 @@ credits to zaid bro and dcspam bot
 
 
 # Commands
-- ( ! , . ` )
+- ( / ! , . ` )
 - spam ➪ song
-- banall ➪ play,skip
+- banall ➪ play,skip, mute, hi
 - start ➪ chipora
 - porn ➪ hmm, ha
