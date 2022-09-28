@@ -12,7 +12,7 @@ credits to zaid bro and dcspam bot
 
 
 # Commands
-• spam ➪ song
-• banall ➪ play,skip
-•
-•
+- • spam ➪ song
+- • banall ➪ play,skip
+- •
+- •
