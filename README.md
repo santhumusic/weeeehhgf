@@ -8,8 +8,8 @@
 
 
 # dont miss use 😑 
-credits to zaid bro and dcspam bot
-
+# Credits 
+- Pornstar Santhu, Kanna
 
 # Commands
 - ( / ! , . ` )
