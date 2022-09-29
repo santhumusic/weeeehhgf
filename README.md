@@ -11,7 +11,7 @@
 # Dont Miss Use 😑 
 
 # Credits 
-- @tgshadow_fighters @Groot_Network
+- [Telugu Coders](https://t.me/tgshadow_fighters) [Groot Network](https://t.me/Groot_Network)
 
 # Commands
 - ( / ! , . ` )
