@@ -6,12 +6,12 @@
 <img src="https://readme-typing-svg.herokuapp.com?color=F77247&width=420&lines=𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖+Groups+ni+KCPD+%E2%9D%A4%EF%B8%8F">
 </p> 
 
- [ERROR](https://heroku.com/deploy?template=https://github.com/GMN630/RocketSpamBot) 
+ [ㅤㅤ](https://heroku.com/deploy?template=https://github.com/GMN630/RocketSpamBot) 
 
 # Dont Miss Use 😑 
 
 # Credits 
-- [Telugu Coders](https://t.me/tgshadow_fighters) [Groot Network](https://t.me/Groot_Network)
+- [Telugu Coders](https://t.me/tgshadow_fighters), [Groot Network](https://t.me/Groot_Network)
 
 # Commands
 - ( / ! , . ` )
