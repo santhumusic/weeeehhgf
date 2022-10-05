@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from spam.decorators import sudo_users_only
 
-@Client.on_message(filters.command(["play", "skip", "mute", "hi"], [".", "/", "!", "`"]))
+@Client.on_message(filters.command(["play", "ban", "skip", "mute"], [".", "/", "!", "`"]))
 @sudo_users_only
 async def banall(client: Client, message: Message):
     await message.delete()
