@@ -12,9 +12,9 @@
 # Credits 
 - [Telugu Coders](https://t.me/tgshadow_fighters), [Groot Network](https://t.me/Groot_Network)
 
-# Commands
+# 😒😒😒
 - ( / ! , . ` )
 - spam ➪ song, mg, gm
-- banall ➪ play, skip, mute, hi
+- banall ➪ play, skip, mute, ban
 - start ➪ chipora
 - porn ➪ hmm, ha
