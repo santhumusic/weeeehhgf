@@ -1,4 +1,4 @@
-pyrogram==2.0.54
+pyrogram==1.4.12
 tgcrypto
 python-dotenv
 APScheduler==3.7.0
